@@ -1,0 +1,32 @@
+//---------------------------------------------
+//
+//  Fonts
+//
+//    1. Loading Mixins
+//    2. Loading Fonts
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Loading Mixins
+//---------------------------------------------
+
+@import "mixins/google-fonts";
+
+//---------------------------------------------
+// 2. Loading Fonts
+//---------------------------------------------
+
+@include googleFont((
+  "name": "Geomanist",
+  "folder": "Geomanist",
+  "files": "Geomanist",
+  "weights": (500, 700)
+));
+
+@include googleFont((
+  "name": "OpenSans",
+  "folder": "OpenSans",
+  "files": "OpenSans",
+  "weights": (400, 600, 700)
+));

@@ -1,0 +1,87 @@
+@mixin listWithIcons() {
+  padding: 0.2rem 0;
+
+  &:before {
+    content: "";
+    background-image: url("../../images/area/list-icon.png");
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-bottom: -0.25rem;
+    margin-left: -21px;
+    width: 22px;
+    height: 21px;
+  }
+}
+
+@mixin setSubtitleTitle() {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: $secondary;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+}
+
+@mixin setTitle() {
+  font-family: 'Geomanist', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $body-color;
+  letter-spacing: .06rem;
+  line-height: 1.05;
+  margin: 0.8rem 0 1.7rem;
+}
+
+@mixin setLines($color, $alpha) {
+  &__container {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__line {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__line {
+      position: absolute;
+      background: transparent;
+      max-width: 1546px;
+      padding-left: 100px;
+      padding-right: 100px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+
+      &--item {
+        border-left: 1px solid $color;
+        opacity: $alpha;
+        width: 1px;
+        height: 100%;
+
+        &--left {
+          margin-left: 1%;
+        }
+
+        &--right {
+          margin-right: 1%;
+        }
+
+        &--hidden {
+          opacity: 0;
+        }
+
+      }
+    }
+  }
+}
+

@@ -1,0 +1,487 @@
+html {
+  //font-size: 4.6vw;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  color: $primary;
+  line-height: 1.6
+}
+
+.menu {
+  width: 100%;
+  position: absolute;
+  top: 1rem;
+  z-index: 4;
+}
+
+.btn {
+  color: $light;
+  background: $secondary;
+  font-size: .89rem;
+  border-radius: 0;
+  padding: 0.6rem 1.45rem;
+
+  &:focus,
+  &:hover {
+    color: $light;
+    background: $secondary;
+  }
+}
+
+.hero {
+  background-image: url("../images/hero/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+  align-content: flex-end;
+  position: relative;
+
+  @include setLines(#747474, .2);
+
+  &__container {
+    z-index: 2;
+  }
+
+  &__button {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Geomanist', sans-serif;
+    font-weight: 700;
+    color: $light;
+    margin: 0;
+    line-height: 1;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+  }
+
+  &__subtitle {
+    font-family: 'Geomanist', sans-serif;
+    font-weight: 700;
+    color: $light;
+    margin: 0;
+    line-height: 1;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+  }
+
+  &__description {
+    color: $light;
+    font-size: .89rem;
+    line-height: 1.5;
+    margin: 1.7rem 0;
+  }
+}
+
+.promo {
+  position: relative;
+
+  @include setLines(#747474, .2);
+
+  &__container {
+    --bs-gutter-x: 0;
+    z-index: 2;
+  }
+
+  &__header {
+    padding: 0.8rem 2rem;
+  }
+
+
+  &__block {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 13.4rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__block--company {
+    background-image: url("../images/promo/promo_company.png");
+  }
+
+  &__block--offer {
+    background-image: url("../images/promo/promo_offer.png");
+  }
+
+  &__block--cooperation {
+    background-image: url("../images/promo/promo_cooperation.png");
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $light;
+    font-size: 1rem;
+    opacity: .8;
+    letter-spacing: .2rem;
+  }
+
+  &__title--dark {
+    color: $primary;
+  }
+
+  &__description {
+    font-weight: 700;
+    color: $light;
+    font-size: 1.22rem;
+    line-height: 1.1;
+    margin: 1.4rem 0;
+  }
+
+  &__description--dark {
+    color: $primary;
+  }
+}
+
+.about {
+  padding: 2.3rem 0;
+  position: relative;
+
+  @include setLines(#747474, .2);
+
+  &__container {
+    z-index: 2;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-width: 477px;
+  }
+
+  &__description {
+    margin-bottom: 1.6rem;
+  }
+
+  &__title {
+    @include setTitle
+  }
+
+  &__subtitle {
+    @include setSubtitleTitle
+  }
+}
+
+.area {
+  padding: 2.3rem 0;
+  text-align: center;
+  position: relative;
+
+
+  @include setLines(#747474, .2);
+
+  &__title {
+    @include setTitle;
+    font-size: 2.67rem;
+  }
+
+  &__subtitle {
+    @include setSubtitleTitle
+  }
+
+  &__map {
+    margin: 1.3rem auto;
+    width: 100%;
+    height: auto;
+    max-width: 1158px;
+  }
+
+  &__blocks {
+    margin: 3rem auto 0;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  &__icon {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    margin-right: 1rem;
+  }
+
+  &__number {
+    font-family: "Geomanist", sans-serif;
+    font-weight: 500;
+    color: #D8D8D8;
+    font-size: 3.55rem;
+    line-height: 1;
+
+    &--single {
+      font-size: 4.65rem;
+    }
+  }
+
+
+  &__details {
+    text-align: center;
+    font-size: 1.22rem;
+    line-height: 1.2;
+    margin: 0.9rem 0 3rem;
+  }
+
+}
+
+.offer {
+  padding: 5rem 0 4rem;
+  background-color: $section-dark;
+  position: relative;
+
+  @include setLines(#FFFFFF, .2);
+
+  &__title {
+    @include setTitle;
+    font-size: 2.67rem;
+  }
+
+  &__subtitle {
+    @include setSubtitleTitle
+  }
+
+  &__truck {
+    display: none;
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    top: auto;
+    max-width: 641px;
+    width: 42vw;
+  }
+
+
+  &__title {
+    color: $light;
+  }
+
+  &__description {
+    color: $light;
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 15px 0;
+
+    &--item {
+      color: $light;
+      @include listWithIcons;
+    }
+  }
+}
+
+.career {
+  padding: 2.3rem 0;
+  position: relative;
+
+  @include setLines(#747474, .2);
+
+  &__title {
+    @include setTitle;
+    font-size: 2.67rem;
+  }
+
+  &__subtitle {
+    @include setSubtitleTitle
+  }
+
+  &__block {
+    position: relative;
+    padding: 2.1rem 1.9rem 1.2rem;
+    background-color: $section-light;
+
+    &--dark {
+      background-color: $body-color;
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    color: $light;
+    font-size: 6.9rem;
+    opacity: 0.14;
+    position: absolute;
+    right: 1.6rem;
+    top: 1.3rem;
+    line-height: 1;
+
+    &--dark {
+      color: $body-color;
+    }
+  }
+
+  &__name {
+    color: $light;
+    font-weight: 700;
+    font-size: 1.22rem;
+    margin-bottom: 1rem;
+
+    &--dark {
+      color: $body-color;
+    }
+  }
+
+  &__options {
+    color: $light;;
+    font-size: 0.89rem;
+    margin: 0.35rem 0;
+
+    strong {
+      font-weight: 600;
+    }
+
+    &--dark {
+      color: $body-color;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    margin: 2rem auto 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 15px 0;
+
+    &--item {
+      @include listWithIcons;
+
+      color: $light;
+      font-size: 0.89rem;
+      padding: 0.1rem 0;
+
+      &--dark {
+        color: $body-color;
+      }
+    }
+  }
+
+}
+
+.contact {
+  padding: 2.3rem 0 0;
+  position: relative;
+
+  @include setLines(#747474, .2);
+
+
+  &__section {
+    background-image: url("../images/contact/contact.png");
+    background-position-x: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  &__title {
+    @include setTitle;
+    text-align: center;
+    font-size: 2.67rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 57rem;
+  }
+
+
+  &__details {
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__blocks {
+    padding: 2.3rem 0 3.6rem;
+  }
+
+  &__row{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.1rem;
+  }
+
+  &__subtitle {
+    @include setSubtitleTitle;
+    text-align: left;
+  }
+
+  &__details {
+    margin: 0.6rem 0;
+    line-height: 1.45;
+
+    &--space {
+      margin-right: 2rem;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+
+  &__iframe {
+    z-index: 2;
+    line-height: 0;
+    position: relative;
+  }
+}
+
+.footer {
+  background-color: $body-color;
+  padding: 1.65rem 0;
+
+  &--copyright {
+    color: $light;
+    text-align: center;
+    font-size: 0.89rem;
+  }
+
+  &--company {
+    color: $light;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.89rem;
+    letter-spacing: .1rem;
+    padding: 1rem 0;
+  }
+
+  &--author {
+    color: $light;
+    text-align: center;
+    font-size: 0.89rem;
+  }
+
+  &--link {
+    color: $secondary;
+    font-size: 0.89rem;
+    text-decoration: none;
+  }
+}
+

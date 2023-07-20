@@ -1,0 +1,91 @@
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 2.67rem;
+  }
+
+
+  .hero {
+    padding-bottom: 9.3rem;
+    min-height: 42.7rem;
+
+    &__button {
+      text-align: left;
+    }
+
+    &__title {
+      font-size: 6rem;
+    }
+
+    &__subtitle {
+      font-size: 4.45rem;
+    }
+  }
+
+
+  .promo {
+    position: relative;
+    margin-top: -7rem;
+    --bs-gutter-x: 1.5rem;
+
+
+    &__block {
+      min-height: 16.8rem;
+    }
+  }
+
+  .about {
+    padding: 5.3rem 0 3.1rem 0
+  }
+  .area {
+    padding: 0 0 2rem;
+
+    &__block {
+      justify-content: flex-start;
+    }
+
+    &__details {
+      text-align: left;
+    }
+
+  }
+  .offer {
+    padding: 5.3rem 0 4.3rem
+  }
+
+  .career {
+    padding: 10rem 0 4.4rem
+  }
+  .contact {
+    padding: 0;
+
+    &__row {
+      width: auto;
+    }
+
+    &__block {
+      flex-wrap: nowrap;
+    }
+  }
+
+
+  .footer {
+
+    &--copyright {
+      text-align: left;
+    }
+
+    &--company {
+      text-align: center;
+      padding: 0;
+    }
+
+    &--author {
+      text-align: right;
+    }
+  }
+
+}
